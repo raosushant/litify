@@ -1,0 +1,7 @@
+{!REQUIRESCRIPT("/soap/ajax/29.0/connection.js")}
+{!REQUIRESCRIPT("/soap/ajax/29.0/apex.js")}
+
+var result = 
+sforce.apex.execute("ReferLitify", "createReferral", {intakeId: "{!Intake__c.Id}"});
+
+window.location.reload();
